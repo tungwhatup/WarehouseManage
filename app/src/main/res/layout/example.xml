@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is normal text size"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:id="@+id/forgot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2sp"
+            android:text="This is title text size"
+            android:textColor="#DE000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:translationY="-1.17sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Hint"
+            app:endIconDrawable="@drawable/ic_baseline_person_24"
+            app:endIconMode="custom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_name"
+                android:text="AAA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_in_out"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radio_group_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                style="@style/radioButtonStyle"
+                android:id="@+id/radio_in"
+                android:text="In"
+                android:checked="true"
+                android:background="@drawable/radio_on"/>
+            <RadioButton
+                android:id="@+id/radio_out"
+                android:text="Out"
+                style="@style/radioButtonStyle"
+                android:background="@drawable/radio_off"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Product"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/background_button"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

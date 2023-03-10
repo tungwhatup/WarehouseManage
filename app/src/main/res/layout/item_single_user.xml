@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/layout_single_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black"
+            android:text="asfagsdgdsgsgsdgasgfafafsdfdfdsf"
+            android:maxLength="20"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_product_id"
+            android:layout_below="@+id/tv_name"
+            android:text="Email: "
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_email"
+            android:layout_toEndOf="@+id/tv_product_id"
+            android:text="fsajio@gmail.com"
+            android:layout_alignBottom="@+id/tv_product_id"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_created_on"
+            android:layout_below="@+id/tv_product_id"
+            android:text="Phone: "
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_phone"
+            android:layout_toEndOf="@+id/tv_created_on"
+            android:text="+8453126894"
+            android:layout_alignBottom="@+id/tv_created_on"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_belongs_to"
+            android:layout_below="@+id/tv_created_on"
+            android:text="Is part of: "
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_wh"
+            android:layout_toEndOf="@+id/tv_belongs_to"
+            android:text="Warehouse A"
+            android:layout_alignBottom="@+id/tv_belongs_to"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="Age: 28"
+            android:id="@+id/tv_age"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-black"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

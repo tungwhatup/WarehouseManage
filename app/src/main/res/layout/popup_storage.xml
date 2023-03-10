@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_product_name"
+                android:id="@+id/ic_product_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_pro_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                app:layout_constraintTop_toTopOf="@id/ic_product_name"
+                app:layout_constraintStart_toEndOf="@id/ic_product_name"
+                app:layout_constraintBottom_toBottomOf="@id/ic_product_name"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_pro_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="asdasfsagggnfdosgijdlkof jglkfdgjfdigjldfkgj"
+                android:singleLine="false"
+                android:maxWidth="250dip"
+                app:layout_constraintTop_toBottomOf="@id/tv_pro_name"
+                app:layout_constraintStart_toStartOf="@+id/tv_pro_name"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_product_id"
+                android:id="@+id/ic_product_id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_pro_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product ID"
+                app:layout_constraintTop_toTopOf="@id/ic_product_id"
+                app:layout_constraintStart_toEndOf="@id/ic_product_id"
+                app:layout_constraintBottom_toBottomOf="@id/ic_product_id"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_pro_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintTop_toBottomOf="@id/tv_pro_id"
+                app:layout_constraintStart_toStartOf="@+id/tv_pro_id"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_calendar"
+                android:id="@+id/ic_calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Inventory since"
+                app:layout_constraintTop_toTopOf="@id/ic_calendar"
+                app:layout_constraintStart_toEndOf="@id/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="@id/ic_calendar"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_oldest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintTop_toBottomOf="@id/tv_cal"
+                app:layout_constraintStart_toStartOf="@+id/tv_cal"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_warehouse"
+                android:id="@+id/ic_warehouse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_warehouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location in Warehouse"
+                app:layout_constraintTop_toTopOf="@id/ic_warehouse"
+                app:layout_constraintStart_toEndOf="@id/ic_warehouse"
+                app:layout_constraintBottom_toBottomOf="@id/ic_warehouse"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_zone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintTop_toBottomOf="@id/tv_warehouse"
+                app:layout_constraintStart_toStartOf="@+id/tv_warehouse"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_quantity"
+                android:id="@+id/ic_quantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                app:layout_constraintTop_toTopOf="@id/ic_quantity"
+                app:layout_constraintStart_toEndOf="@id/ic_quantity"
+                app:layout_constraintBottom_toBottomOf="@id/ic_quantity"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintTop_toBottomOf="@id/tv_quantity"
+                app:layout_constraintStart_toStartOf="@+id/tv_quantity"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_building"
+                android:id="@+id/ic_person_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_manufacturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manufacturer"
+                app:layout_constraintTop_toTopOf="@id/ic_person_name"
+                app:layout_constraintStart_toEndOf="@id/ic_person_name"
+                app:layout_constraintBottom_toBottomOf="@id/ic_person_name"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_manufacturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintTop_toBottomOf="@id/tv_manufacturer"
+                app:layout_constraintStart_toStartOf="@+id/tv_manufacturer"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_price_32"
+                android:id="@+id/ic_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                app:layout_constraintTop_toTopOf="@id/ic_price"
+                app:layout_constraintStart_toEndOf="@id/ic_price"
+                app:layout_constraintBottom_toBottomOf="@id/ic_price"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintTop_toBottomOf="@id/tv_price"
+                app:layout_constraintStart_toStartOf="@+id/tv_price"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_price"
+                android:id="@+id/ic_currency"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency"
+                app:layout_constraintTop_toTopOf="@id/ic_currency"
+                app:layout_constraintStart_toEndOf="@id/ic_currency"
+                app:layout_constraintBottom_toBottomOf="@id/ic_currency"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/des_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintTop_toBottomOf="@id/tv_currency"
+                app:layout_constraintStart_toStartOf="@+id/tv_currency"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnDismiss"
+            android:background="@drawable/background_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="Close"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</ScrollView>

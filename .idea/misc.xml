@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/accent.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/background_button.xml" value="0.158" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/background_button_outline.xml" value="0.158" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/bg_spinner.xml" value="0.158" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/bg_spinner2.xml" value="0.155" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/bg_spinner_register.xml" value="0.155" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/button_ico.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/circle_button.xml" value="0.1" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/divider.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/email.xml" value="0.72" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/gradient_spinner.xml" value="0.155" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_age.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_arrow_left.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.155" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/radio_group_background.xml" value="0.1" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/radio_off.xml" value="0.1" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/radio_on.xml" value="0.1" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/drawable/some_id.xml" value="0.1495" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_bar_chart.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_capture.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_code_scanner.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_config_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_forgot_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_main_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_pie_chart.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_product_recycler.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_register_user.xml" value="0.25" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_storage_recycler.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/activity_userlist_recycler.xml" value="0.2578125" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/choose_zone_recycler.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/example.xml" value="0.264" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/fragment_chart.xml" value="0.264" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/fragment_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/fragment_user_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/item_single_choose_zone.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/item_single_in_storage.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/item_single_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/item_single_user.xml" value="0.253125" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/item_single_zone.xml" value="0.253125" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/nav_header.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/popup_chart.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/popup_detail_recycler.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/popup_otp.xml" value="0.20854700854700856" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/popup_storage.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/spinner_layout_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/spinner_layout_test.xml" value="0.253125" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/test.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/layout/zone_recycler.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/menu/nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidApp/WarehouseManage/app/src/main/res/menu/popup_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioSDK/Sdk/platforms/android-32/data/res/layout/simple_dropdown_item_1line.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioSDK/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
