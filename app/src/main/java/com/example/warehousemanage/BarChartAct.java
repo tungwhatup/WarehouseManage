@@ -22,6 +22,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -30,6 +31,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -155,45 +157,44 @@ public class BarChartAct extends AppCompatActivity {
         else if(interval.equals("Monthly"))
             format1 = new SimpleDateFormat("MMM yyyy",Locale.ENGLISH);
         else format1 = new SimpleDateFormat("yyyy",Locale.ENGLISH);
-        mFStore.collection(strInOrOut)
-                .orderBy("Time of submit", Query.Direction.ASCENDING)
-                .whereEqualTo("Product Code",strBarCodeSingle)
+        CollectionReference reference = mFStore.collection(strInOrOut);
+        Query query = reference.orderBy("Time of submit", Query.Direction.ASCENDING)
                 .whereEqualTo("BelongsTo",warehouse)
+                .whereEqualTo("Product Code",strBarCodeSingle)
                 .whereGreaterThanOrEqualTo("Time of submit",startDateStamp)
-                .whereLessThanOrEqualTo("Time of submit",endDateStamp)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
-                        int index = -1;
-                        for(DocumentSnapshot snapshot: snapshotList){
-                            Timestamp timestamp = (Timestamp) snapshot.get("Time of submit");
-                            Date date = timestamp.toDate();
-                            String day = format1.format(date);
-                            if(!labelsName.contains(day)) {
-                                labelsName.add(day);
-                                qtyOfItem.add(0);
-                                index += 1;
-                            }
-                            String tempQtyStr = snapshot.get("Quantity").toString();
-                            qtyOfItem.set(index,qtyOfItem.get(index)+Integer.parseInt(tempQtyStr));
-                            String strQty = snapshot.get("Quantity").toString();
-                            Log.d("Sendinginfoto",day + " ," + strQty);
-                            Log.d("Sendinginfo",qtyOfItem.toString());
-                        }
-                        float price = Float.parseFloat(priceMap.get(strBarCodeSingle));
-                        for(int i = 0; i < qtyOfItem.size() ; i++){
-                            revenue.add(qtyOfItem.get(i)*price);
-                        }
-                        setMyBoolean(true);
+                .whereLessThanOrEqualTo("Time of submit",endDateStamp);
+        query.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
+                int index = -1;
+                for(DocumentSnapshot snapshot: snapshotList){
+                    Timestamp timestamp = (Timestamp) snapshot.get("Time of submit");
+                    Date date = timestamp.toDate();
+                    String day = format1.format(date);
+                    if(!labelsName.contains(day)) {
+                        labelsName.add(day);
+                        qtyOfItem.add(0);
+                        index += 1;
                     }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d("Sendinginfo",e.getMessage());
-                    }
-                });
+                    String tempQtyStr = snapshot.get("Quantity").toString();
+                    qtyOfItem.set(index,qtyOfItem.get(index)+Integer.parseInt(tempQtyStr));
+                    String strQty = snapshot.get("Quantity").toString();
+                    Log.d("Sendinginfoto",day + " ," + strQty);
+                    Log.d("Sendinginfo",qtyOfItem.toString());
+                }
+                float price = Float.parseFloat(priceMap.get(strBarCodeSingle));
+                for(int i = 0; i < qtyOfItem.size() ; i++){
+                    revenue.add(qtyOfItem.get(i)*price);
+                }
+                setMyBoolean(true);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("Sendinginfo",e.getMessage());
+            }
+        });
     }
 
     private void getDataForMUlti(){
@@ -203,6 +204,7 @@ public class BarChartAct extends AppCompatActivity {
         else if(interval.equals("Monthly"))
             format1 = new SimpleDateFormat("MMM yyyy",Locale.ENGLISH);
         else format1 = new SimpleDateFormat("yyyy",Locale.ENGLISH);
+
         mFStore.collection(strInOrOut)
                 .orderBy("Time of submit", Query.Direction.ASCENDING)
                 .whereEqualTo("BelongsTo",warehouse)

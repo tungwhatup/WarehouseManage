@@ -144,6 +144,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     }else{
                         user.sendEmailVerification();
                         Toast.makeText(RegisterUser.this, "Check your email to verify your account", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(RegisterUser.this,MainActivity.class));
+                        finish();
                     }
                     progressBar.setVisibility(View.GONE);
                 }else{

@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText inputCode1,inputCode2,inputCode3,inputCode4,inputCode5,inputCode6;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks;
     private String otpStr;
+    private FirebaseUser user;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar,progressBar_popUp;
     public static boolean first_time = false;
@@ -141,48 +142,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(MainActivity.this,MainScreen.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-//                    user = mAuth.getCurrentUser();
-//                    FirebaseFirestore.getInstance()
-//                            .collection("Users")
-//                            .document(user.getUid())
-//                            .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-//                                @Override
-//                                public void onSuccess(DocumentSnapshot documentSnapshot) {
-//                                    phone[0] = documentSnapshot.getString("Phone");
-//                                    user.getMultiFactor().getSession().addOnCompleteListener(new OnCompleteListener<MultiFactorSession>() {
-//                                        @Override
-//                                        public void onComplete(@NonNull Task<MultiFactorSession> task) {
-//                                            if (task.isSuccessful()){
-//                                                MultiFactorSession multiFactorSession = task.getResult();
-//                                                PhoneAuthOptions phoneAuthOptions =
-//                                                        PhoneAuthOptions.newBuilder()
-//                                                                .setPhoneNumber(phone[0])
-//                                                                .setTimeout(30L, TimeUnit.SECONDS)
-//                                                                .setMultiFactorSession(multiFactorSession)
-//                                                                .setActivity(MainActivity.this)
-//                                                                .setCallbacks(callbacks)
-//                                                                .requireSmsValidation(true)
-//                                                                .build();
-//                                                PhoneAuthProvider.verifyPhoneNumber(phoneAuthOptions);
-//                                                createNewDialogEnroll(user,phone[0],multiFactorSession);
-//                                            }
-//                                        }
-//                                    }).addOnFailureListener(new OnFailureListener() {
-//                                        @Override
-//                                        public void onFailure(@NonNull Exception e) {
-//                                            Toast.makeText(MainActivity.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
-//                                        }
-//                                    });
-//                                }
-//                            }).addOnFailureListener(new OnFailureListener() {
-//                                @Override
-//                                public void onFailure(@NonNull Exception e) {
-//                                    Log.d("Sendinginfo",e.getMessage());
-//                                }
-//                            });
+//                    Intent intent = new Intent(MainActivity.this,MainScreen.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+                    user = mAuth.getCurrentUser();
+                    FirebaseFirestore.getInstance()
+                            .collection("Users")
+                            .document(user.getUid())
+                            .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                @Override
+                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                    phone[0] = documentSnapshot.getString("Phone");
+                                    user.getMultiFactor().getSession().addOnCompleteListener(new OnCompleteListener<MultiFactorSession>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<MultiFactorSession> task) {
+                                            if (task.isSuccessful()){
+                                                MultiFactorSession multiFactorSession = task.getResult();
+                                                PhoneAuthOptions phoneAuthOptions =
+                                                        PhoneAuthOptions.newBuilder()
+                                                                .setPhoneNumber(phone[0])
+                                                                .setTimeout(30L, TimeUnit.SECONDS)
+                                                                .setMultiFactorSession(multiFactorSession)
+                                                                .setActivity(MainActivity.this)
+                                                                .setCallbacks(callbacks)
+                                                                .requireSmsValidation(true)
+                                                                .build();
+                                                PhoneAuthProvider.verifyPhoneNumber(phoneAuthOptions);
+                                                createNewDialogEnroll(user,phone[0],multiFactorSession);
+                                            }
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(MainActivity.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d("Sendinginfo",e.getMessage());
+                                }
+                            });
 
                 }else if(task.getException() instanceof FirebaseAuthMultiFactorException){
                     FirebaseAuthMultiFactorException e = (FirebaseAuthMultiFactorException) task.getException();
@@ -208,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFailure(@NonNull Exception e) {
                 Log.d("Sendinginfo",e.getMessage());
-                Toast.makeText(MainActivity.this, "Failed to login", Toast.LENGTH_SHORT).show();
+
             }
         });
     }

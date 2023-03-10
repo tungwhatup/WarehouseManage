@@ -68,7 +68,7 @@ public class HomeFragment extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                warehouse = documentSnapshot.get("BelongsTo").toString();
+                warehouse = documentSnapshot.get("IsUserOf").toString();
             }
         }).addOnFailureListener(new OnFailureListener() {
                     @Override
